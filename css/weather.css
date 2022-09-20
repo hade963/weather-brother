@@ -1,0 +1,207 @@
+/*Start  Global Rules*/
+:root { 
+  --hot-color:  linear-gradient(to right top, #ff5800, #ff6700, #ff7400, #ff8000, #ff8c00, #ff9800, #ffa300, #ffae00, #ffbc00, #ffcb00, #ffd900, #ffe800);
+  --warm-color: linear-gradient(to right top, #1e5506, #1f5f07, #206908, #1f730a, #1e7d0c, #208b0d, #22990f, #23a710, #2abc0f, #32d20d, #3ae808, #43ff00);
+  --cold-color: linear-gradient(to right top, #006fff, #0076ff, #007dff, #0083ff, #0089ff, #0091ff, #0099ff, #00a0ff, #00abff, #00b5ff, #00bfff, #00c8ff);
+}
+body { 
+  transition: background-image 1s;
+  position: relative;
+}
+.container { 
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) { 
+  .container { 
+    width: 750px;
+  }
+}
+@media (min-width: 992px) { 
+  .container { 
+    width: 950px;
+  }
+}@media (min-width: 1200px) { 
+  .container { 
+    width: 1170px;
+  }
+}
+/*End Global Rules*/
+/* Start Search */
+.search { 
+  padding-top: 20px;
+}
+.search .container { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search .container form input#city { 
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white; 
+  margin-right: 20px;
+  padding: 5px 20px 5px 2px;
+  color: white;
+}
+.search input::placeholder { 
+  color: white;
+}
+.search input:focus ,
+.search input::selection{ 
+  background-color: transparent;
+}
+.search form button { 
+  background-color: transparent;
+  outline: none;
+  border: 1px solid white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+}
+/* End Search */
+/* Start weather State */
+.weather-state { 
+  padding-top: 80px;
+}
+@media(max-width) { 
+  .weather-state { 
+    padding-top: 160px;
+  }
+}
+.weather-state .container { 
+  display: flex;
+}
+@media(max-width: 767px) { 
+  .weather-state .container { 
+    flex-direction: column;
+    gap: 80px;
+  }
+}
+.weather-state .temp,
+.weather-state .factors { 
+  flex-basis: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+@media(max-width: 767px) { 
+  .weather-state .temp,
+  .weather-state .factors  { 
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .weather-state .container i { 
+    order: -1;
+    font-size: .7rem;
+  }
+  .weather-state .container p { 
+    font-size: .7rem;
+  }
+}
+.weather-state .container .box { 
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .weather-state .container .temp .box,
+  .weather-state .container .factors .box {
+    flex-direction: column;
+    gap: 2px;
+  } 
+}
+.weather-state .container .box p {
+color: white;
+position: relative;
+font-size: 1.1rem;
+}
+.weather-state .container .temp .box p::after {
+  content: '';
+  border: 1px solid white;
+  position: absolute;
+  top: -4px;
+  left: 42px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+}
+
+
+.weather-state .container .box i {
+  color: white;
+  display: inline-block;
+  font-size: 1.7rem;
+}
+.weather-state .container .temp .box:first-child i { 
+  margin-right: 10px;
+}
+
+.weather-state .container .country { 
+  display: flex;
+  flex-basis: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.weather-state .container .country h1 { 
+  color: white;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.weather-state .container .country .box { 
+  color: white;
+  display: flex;
+  gap: 10px;
+}
+/* End weather State */
+/* Start Error  */
+.error { 
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.error::before { 
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0; 
+  background-color: rgb(156, 11, 11);
+  height: 5px;
+  transition: all 1s ease;
+  animation: increase 5s;
+}
+@keyframes increase {
+  0% {
+    width: 0;
+  }
+
+  100% { 
+    width: 100%;
+  }
+
+}
+.error #exit { 
+  display: flex;
+  justify-content: flex-end;
+}
+.error #exit i { 
+  color: white;
+}
+.error p { 
+  color: white;
+  padding: 20px 20px; 
+}
+
+/* End Error  */
