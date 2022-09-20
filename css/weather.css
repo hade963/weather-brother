@@ -71,7 +71,7 @@ body {
 }
 @media(max-width) { 
   .weather-state { 
-    padding-top: 160px;
+    padding-top: 120px;
   }
 }
 .weather-state .container { 
