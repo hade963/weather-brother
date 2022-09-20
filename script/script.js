@@ -43,7 +43,7 @@ function startAnimation() {
   slides.style.transform = `translate(-${number}px)`;
   multiplyer++;
 }
-},2000);
+},1000);
 }
 
 function stopAnimation() { 
