@@ -72,7 +72,7 @@ async function getCityLocation(city) {
     }
   }
   catch { 
-    displayError('NETWORK ERORR : Please check your conection');
+    displayError('NETWORK ERROR : please check your connection and try again');
   }
 }
 
