@@ -65,7 +65,7 @@ function stopAnimation() {
 
 async function getCityLocation(city) { 
   try { 
-    const respons = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=253f12567acf64fb37aa6593a0332a42`);
+    const respons = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=253f12567acf64fb37aa6593a0332a42`);
     const result = await respons.json();
     if(result[0]) {  
       return { lat: result[0].lat , lon: result[0].lon };
