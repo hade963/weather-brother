@@ -1,13 +1,3 @@
-/* 
-  api key: 253f12567acf64fb37aa6593a0332a42
-  weather api call : 
-  https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid= 253f12567acf64fb37aa6593a0332a42
-
-  Geocode api call :
-  http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key} 
-
-*/
-
 let animation;
 function createSlider(){ 
   const intro = document.createElement('div');
@@ -109,13 +99,7 @@ async function showWeather(city='الرياض') {
   }
 }
 showWeather();
-/*
-1- clouds: <i class="fa-solid fa-clouds"></i>
-2- temp: <i class="fa-solid fa-temperature-low"></i>
-3- max temp : <i class="fa-solid fa-gauge-max"></i>
-4- min temp: <i class="fa-solid fa-gauge-min"></i>
-5- feels like: <i class="fa-solid fa-temperature-full"></i>
-*/
+
 // DOM manibulation 
 function changeBodyBackground(degree) {
   if(degree > 30) { 
